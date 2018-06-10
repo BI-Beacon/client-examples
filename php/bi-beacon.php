@@ -16,9 +16,9 @@ function bibeacon_set($channelid, $color, $period, $server="https://api.cilamp.s
       if ( ($result = @json_decode($result)) !== FALSE ) {
          if ( @$result->message === "'".$channelid."' updated" ) {
             return TRUE;
-         } else echo "Invalid response: ".json_encode($result);
-      } else echo "Server response structure error: ".error_get_last()['message'];
-   } else echo "API Request failed: ".error_get_last()['message'];
+         } else { echo "Invalid response: ".json_encode($result); }
+      } else { echo "Server response structure error: ".error_get_last()['message']; }
+   } else { echo "API Request failed: ".error_get_last()['message']; }
    return FALSE;
 }
 
