@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Set a BI-Beacon to blue
 curl -X POST -F "color=#0000FF" "https://api.cilamp.se/v1/simple-awesome-monitor"
 
