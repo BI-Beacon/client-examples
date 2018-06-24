@@ -1,12 +1,12 @@
+package se.bibeacon.examples.java;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Map;
 
-public class setBeacon {
+public class SetBeacon {
 
    public static boolean setColor( String systemid, String color ) {
       try {
