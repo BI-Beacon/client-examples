@@ -1,7 +1,10 @@
-# BI beacon
-Small wrapper around the api for bi beacon. More info can be found at https://bi-beacon.readthedocs.io/en/latest/code_examples.html
+# JavaScript
 
-More info about the BI beacon can be found at https://bi-beacon.se/
+## Compatability
+ES5
+
+## Requirements
+Node.js
 
 ## Usage
 
