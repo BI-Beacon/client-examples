@@ -19,7 +19,7 @@ const querystring = require('querystring');
 class Beacon {
 
   constructor(systemid, {
-    beaconHost = 'api.cilamp.se',
+    beaconHost = 'api.bi-beacon.com',
     apiVersion = 1,
   } = {}) {
     this._systemid = systemid;

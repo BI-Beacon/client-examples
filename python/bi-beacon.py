@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 import sys
 
+API_SERVER = "api.bi-beacon.com"
+
 
 def set_beacon(channelkey, rrggbb, period_ms=0):
     """Python 2/3 compatible hacky code below!"""
@@ -8,21 +10,16 @@ def set_beacon(channelkey, rrggbb, period_ms=0):
     try:
         from urllib.request import urlopen
         from urllib.parse import urlencode, quote_plus
+
         PYTHON3 = True
     except ImportError:
         from urllib2 import urlopen
         from urllib import urlencode
 
-    url = 'https://api.cilamp.se/v1/' + channelkey
-    params = {
-        'color': rrggbb,
-        'period': period_ms
-    }
+    url = "https://{}/v1/{}".format(API_SERVER, channelkey)
+    params = {"color": rrggbb, "period": period_ms}
     if PYTHON3:
-        data = urlencode(
-            params,
-            quote_via=quote_plus
-        ).encode('utf-8')
+        data = urlencode(params, quote_via=quote_plus).encode("utf-8")
     else:
         data = urlencode(params)
     print("     url:\t{url}".format(url=url))
@@ -31,7 +28,7 @@ def set_beacon(channelkey, rrggbb, period_ms=0):
     print("response:\t{response}".format(response=req.read()))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) in [3, 4]:
         channelkey = sys.argv[1]
         color = sys.argv[2]

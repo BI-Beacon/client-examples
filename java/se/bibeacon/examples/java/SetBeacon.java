@@ -9,7 +9,7 @@ public class SetBeacon {
 
    public static boolean setColor( String systemid, String color ) {
       try {
-         URLConnection connection = new URL("https://api.cilamp.se/v1/" + systemid).openConnection();
+         URLConnection connection = new URL("https://api.bi-beacon.com/v1/" + systemid).openConnection();
          connection.setDoOutput(true);
          connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
          OutputStream output = connection.getOutputStream();

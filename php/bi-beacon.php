@@ -1,6 +1,6 @@
 <?php
 
-function bibeacon_set($channelid, $color, $period, $server="https://api.cilamp.se/v1/") {
+function bibeacon_set($channelid, $color, $period, $server="https://api.bi-beacon.com/v1/") {
    $options = array(
       'http' => array(
          'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
