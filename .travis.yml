@@ -2,13 +2,6 @@ env:
   global:
     - secure: "boLIGXNJIs5yTey7Ldg0SpjUGjh4/c3yK7+wH7NEmtNN2gdT/q6q8Gxef30aGCVOM7lK57O4FNzAWfQoUVXHLMreSfCE89HQj3VWYhC+zx2s0gU6viQH0ZLBL7B433lpUktrC8fM22D1pmcxQES/xlw4+zNvMLytgJJmtGefQVSSySlMNopMJEonBiTc57+hp3m6MZn0014SQfTAXEbkvTNS/CDB8lXPYCbFsp5NlRm92hlmOUHLqLC/7o4bOUdDnvG4vNlKGa+68abo/+MaVw1qUDDNNgeCJVFATGKHKdzrk1OC5U3LgCx5pqQaimmChjrxAUTRBJK0d7tXLhQhPv9Kr6ZZOkNA9W60+njYkkx/jS2cmm+UrvuPrq/FN6O29fG5nsmXgOdN0VjO7rTiu9dUh783HITDJMW9k8BmJwven2OfGYcrGItaZ2uWy362Hwsi+cgpjboPGj4QEM7X+NpBfyzQMwU77b4prBMoaulew2XHMXpCRWCOlfzZ22VNep9Sc6YASI4BCCu1hPte0qM+HSKMSmPnsjogq2GVLP5txPO3CQvxm3SIpVoqVFs1wEQfjieF31ewHu2qQN02SNOHThyeTEIeVrmMY5v676V4l4OF5fPvhkmgftujCyLLMb5C7I3J0M2w/PhIVY3pdcafKC7kOkubZ5/w7oacBEo="
 
-addons:
-  sonarcloud:
-    organization: "bi-beacon"
-
-script:
-  - sonar-scanner
-
 before_install:
   - curl -F "period=5000" -F "color=#AB00FF" "https://api.bi-beacon.com/v1/${BI_BEACON_SYSTEM_ID}/"
 
