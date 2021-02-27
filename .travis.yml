@@ -1,6 +1,8 @@
 language: python
 python:
   - 3.8
+script:
+  echo "No tests in this repo"
 
 env:
   global:
